@@ -8,7 +8,7 @@ use Illuminate\Http\JsonResponse;
 
 trait apiResponseBuilder
 {
-    public function responseBuilder($status, $code, $message, $data): JsonResponse
+    public function responseBuilder(bool $status, int $code, string $message, array $data = null): JsonResponse
     {
         return response()->json([
             'status' => $status,

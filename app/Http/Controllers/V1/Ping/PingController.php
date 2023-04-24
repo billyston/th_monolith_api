@@ -15,6 +15,6 @@ final class PingController
 
     public function __invoke(Request $request): JsonResponse
     {
-        return $this->responseBuilder(true, Response::HTTP_OK, 'Service is online.', null);
+        return $this->responseBuilder(true, Response::HTTP_OK, 'Service is online.');
     }
 }

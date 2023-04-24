@@ -39,10 +39,10 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
+            \App\Http\Middleware\JsonMiddleware::class,
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \App\Http\Middleware\JsonApiResponseMiddleware::class,
         ],
     ];
 
@@ -51,7 +51,7 @@ class Kernel extends HttpKernel
      *
      * Aliases may be used to conveniently assign middleware to routes and groups.
      *
-     * @var array<string, class-string|string>
+     * @var array<string, string>
      */
     protected $middlewareAliases = [
         'auth' => \App\Http\Middleware\Authenticate::class,

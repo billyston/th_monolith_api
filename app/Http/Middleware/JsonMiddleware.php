@@ -8,7 +8,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-final class JsonApiResponseMiddleware
+final class JsonMiddleware
 {
     /**
      * Handle an incoming request.
@@ -20,10 +20,8 @@ final class JsonApiResponseMiddleware
          */
         $response = $next($request);
 
-        $response->headers->set(
-            key: 'Content-Type',
-            values: 'application/vnd.api+json',
-        );
+        $response->headers->set(key: 'Content-Type', values: 'application/vnd.api+json');
+        $response->headers->set(key: 'Accept', values: 'application/vnd.api+json');
 
         return $response;
     }
