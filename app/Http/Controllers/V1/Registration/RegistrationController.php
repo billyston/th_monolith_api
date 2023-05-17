@@ -6,8 +6,6 @@ namespace App\Http\Controllers\V1\Registration;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\V1\Registration\CreateAccountRequest;
-use App\Http\Requests\V1\Registration\VerifyEmailRequest;
-use App\Repositories\Registration\RegistrationRepository;
 use App\Traits\v1\apiResponseBuilder;
 use Illuminate\Http\JsonResponse;
 

@@ -16,10 +16,6 @@ class RegistrationRepository
 {
     use apiResponseBuilder;
 
-    /**
-     * @param VerifyEmailRequest $verifyEmailRequest
-     * @return JsonResponse
-     */
     public function verification(VerifyEmailRequest $verifyEmailRequest): JsonResponse
     {
         return DB::transaction(function () use ($verifyEmailRequest) {

@@ -9,11 +9,8 @@ use Illuminate\Support\Str;
 
 trait HasUuid
 {
-    /**
-     * @return void
-     */
     public static function bootHasUuid(): void
     {
-        static::creating(fn(Model $model) => $model->resource_id = Str::uuid()->toString());
+        static::creating(fn (Model $model) => $model->resource_id = Str::uuid()->toString());
     }
 }
