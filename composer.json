@@ -58,6 +58,9 @@
             "@php artisan test"
         ]
     },
+    "scripts-descriptions": {
+        "stan": "Run PHPStan static analysis against your application."
+    },
     "extra": {
         "laravel": {
             "dont-discover": []
